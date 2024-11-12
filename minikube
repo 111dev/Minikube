@@ -1,0 +1,13 @@
+  sudo apt-get update -y
+  sudo apt-get install -y curl apt-transport-https
+  sudo apt-get install -y docker.io
+  sudo systemctl enable --now docker
+  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  minikube start --driver=docker
+  minikube start --driver=none
+  minikube start --driver=docker --force
+  minikube status
+
+Note: Use --force to Continue with the Docker Driver (Not Recommended)
+If you really need to use the Docker driver, you can override the warning by adding the --force flag, although this is not recommended for production or stable environments:
