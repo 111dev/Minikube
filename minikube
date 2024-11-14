@@ -11,3 +11,15 @@
 
 Note: Use --force to Continue with the Docker Driver (Not Recommended)
 If you really need to use the Docker driver, you can override the warning by adding the --force flag, although this is not recommended for production or stable environments:
+
+kubectl command for LAB technicalguftgu
+
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+sudo snap install kubectl --classic
+kubectl version --client
+
